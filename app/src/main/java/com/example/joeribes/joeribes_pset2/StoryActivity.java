@@ -5,17 +5,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class Main3Activity extends AppCompatActivity {
+import java.io.Serializable;
+
+public class StoryActivity extends AppCompatActivity {
+
+    Story story;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_story);
 
         Intent intent = getIntent();
-        String receivedText = intent.getStringExtra("ourText");
+        Serializable story = (Story) intent.getSerializableExtra("story");
 
-        TextView textView = (TextView) findViewById(R.id.textView);
-        textView.setText(receivedText);
+        TextView texView = (TextView) findViewById(R.id.textLib);
+        texView.setText(story.toString());
     }
 }

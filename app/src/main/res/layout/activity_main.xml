@@ -83,7 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:elevation="0dp"
-            android:onClick="goToSecond"
+            android:onClick="goToSelectStory"
             android:text="GET STARTED!"
             android:textAppearance="@style/TextAppearance.AppCompat" />
     </LinearLayout>
