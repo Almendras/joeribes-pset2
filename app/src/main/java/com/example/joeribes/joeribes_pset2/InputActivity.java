@@ -8,20 +8,33 @@ import android.widget.EditText;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Serializable;
 
 
 public class InputActivity extends AppCompatActivity {
 
-    public Story story;
+    Story story;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
+
+        story = (Story) getIntent().getSerializableExtra("story");
+
     }
 
-    /*
-    public void goToStory() {
+    public void fillInWord(View view) {
+        EditText editText = (EditText) findViewById(R.id.editText);
+        String word = editText.getText().toString();
+
+        story.fillInPlaceholder(word);
+
+    }
+
+
+
+    public void goToStory(View view) {
         Intent intent = new Intent(this, StoryActivity.class);
         intent.putExtra("story", story);
 
@@ -29,19 +42,8 @@ public class InputActivity extends AppCompatActivity {
         finish();
     }
 
-    private void initializeStory() {
-        try {
-            InputStream is = getAssets().open("madlib0_simple.txt");
-            story = new Story(is);
-
-        } catch(IOException e){
-            e.printStackTrace();
-        }
 
 
-
-    }
-    */
 
 
 

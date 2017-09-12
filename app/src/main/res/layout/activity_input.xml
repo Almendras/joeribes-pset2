@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="goToStory"
+            android:onClick="fillInWord"
             android:text="OK" />
 
     </LinearLayout>
@@ -67,5 +67,12 @@
             android:text="TextView"
             android:layout_weight="0.59" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/Done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goToStory"
+        android:text="Button" />
 
 </LinearLayout>

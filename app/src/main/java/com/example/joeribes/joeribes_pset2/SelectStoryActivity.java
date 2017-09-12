@@ -17,6 +17,8 @@ public class SelectStoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_select_story);
 
         story = (Story) getIntent().getSerializableExtra("story");
+
+
     }
 
     private void initializeStory() {
@@ -31,7 +33,7 @@ public class SelectStoryActivity extends AppCompatActivity {
 
     public void goToStory(View view) {
         initializeStory();
-        Intent intent = new Intent(this, StoryActivity.class);
+        Intent intent = new Intent(this, InputActivity.class);
         intent.putExtra("story", story);
 
         startActivity(intent);

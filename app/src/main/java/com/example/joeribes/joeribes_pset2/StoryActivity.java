@@ -16,10 +16,16 @@ public class StoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story);
 
-        Intent intent = getIntent();
-        Serializable story = (Story) intent.getSerializableExtra("story");
+        story = (Story) getIntent().getSerializableExtra("story");
 
-        TextView texView = (TextView) findViewById(R.id.textLib);
-        texView.setText(story.toString());
+        TextView madLib = (TextView) findViewById(R.id.textLib);
+        madLib.setText(story.toString());
+
+
+        //Intent intent = getIntent();
+       // String receivedText = intent.getStringExtra("ourText");
+
+        //TextView textView = (TextView) findViewById(R.id.textView);
+        //textView.setText(receivedText);
     }
 }
