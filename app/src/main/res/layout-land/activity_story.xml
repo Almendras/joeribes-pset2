@@ -8,8 +8,18 @@
     tools:context="com.example.joeribes.joeribes_pset2.StoryActivity">
 
     <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Your Mad Lib Story!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <TextView
         android:id="@+id/textLib"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="" />
+
 </LinearLayout>

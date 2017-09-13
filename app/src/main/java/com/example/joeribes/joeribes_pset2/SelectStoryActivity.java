@@ -1,13 +1,9 @@
 package com.example.joeribes.joeribes_pset2;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Random;
@@ -41,6 +37,7 @@ public class SelectStoryActivity extends AppCompatActivity {
         }
     }
 
+    // Selects the proper story and and goes to InputActivity
     public void goToStory(View view) {
         switch(view.getId()) {
             case R.id.madlib0:
@@ -72,6 +69,7 @@ public class SelectStoryActivity extends AppCompatActivity {
         finish();
     }
 
+    // Picks a random Mad Lib Story
     public void pickRandomLib() {
         Random rand = new Random();
         int randomNumber = rand.nextInt(5);

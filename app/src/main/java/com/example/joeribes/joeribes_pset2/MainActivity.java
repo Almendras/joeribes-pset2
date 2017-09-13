@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    // Go to SelectStoryActivity
     public void goToSelectStory(View view) {
         Intent intent = new Intent(this, SelectStoryActivity.class);
         startActivity(intent);
