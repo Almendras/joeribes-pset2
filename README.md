@@ -6,3 +6,9 @@ This application will ask you to select a story which won't be seen beforehand. 
 
 # Screenshots
 
+![Alt text](/doc/Main_Portrait.png?raw=true "Main_Portrait")
+![Alt text](/doc/Select_story_portrait.png?raw=true "Select_story_portrait")
+![Alt text](/doc/select_story_landscape.png?raw=true "select_story_landscape")
+![Alt text](/doc/input_portrait.png?raw=true "input_portrait")
+![Alt text](/doc/story_portrait.png?raw=true "story_portrait")
+
