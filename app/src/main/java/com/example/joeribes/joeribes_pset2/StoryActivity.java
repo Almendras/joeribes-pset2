@@ -12,6 +12,13 @@ public class StoryActivity extends AppCompatActivity {
     Story story;
 
     @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, SelectStoryActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story);
@@ -20,12 +27,5 @@ public class StoryActivity extends AppCompatActivity {
 
         TextView madLib = (TextView) findViewById(R.id.textLib);
         madLib.setText(story.toString());
-
-
-        //Intent intent = getIntent();
-       // String receivedText = intent.getStringExtra("ourText");
-
-        //TextView textView = (TextView) findViewById(R.id.textView);
-        //textView.setText(receivedText);
     }
 }

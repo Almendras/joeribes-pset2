@@ -19,6 +19,13 @@ public class InputActivity extends AppCompatActivity {
     int wordCount;
 
     @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, SelectStoryActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
@@ -36,11 +43,7 @@ public class InputActivity extends AppCompatActivity {
 
         TextView hintTextPhrase = (TextView) findViewById(R.id.hintTextView);
         hintTextPhrase.setHint(" please type a/an " + hint);
-
     }
-
-
-
 
     public void fillInWord(View view) {
         EditText editText = (EditText) findViewById(R.id.editText);
@@ -50,30 +53,18 @@ public class InputActivity extends AppCompatActivity {
         wordCounter();
         setHintWord();
 
+        if (story.isFilledIn()) {
+            Intent intent = new Intent(this, StoryActivity.class);
+            intent.putExtra("story", story);
+
+            startActivity(intent);
+            finish();
+        }
     }
 
     public void wordCounter() {
         wordCount = story.getPlaceholderRemainingCount();
-
         TextView madLib = (TextView) findViewById(R.id.wordCounterView);
         madLib.setHint(String.valueOf(wordCount) + " word(s) left");
     }
-
-
-
-    public void goToStory(View view) {
-        Intent intent = new Intent(this, StoryActivity.class);
-        intent.putExtra("story", story);
-
-        startActivity(intent);
-        finish();
-    }
-
-
-
-
-
-
-
-
 }
